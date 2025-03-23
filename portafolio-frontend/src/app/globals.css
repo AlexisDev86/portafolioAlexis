@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Variables originales */
+    --background: #ffffff;
+    --foreground: #171717;
+
+    /*Variables personalizadas */
+    --primary-blue: #4B8BBE;
+    --dark-background: #303030;
+    --light-gray: #888888;
+    --white: #FFFFFF;
+    --python-yellow: #FFD43B;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+section {
+    scroll-margin-top: 4rem; /* Ajusta este valor según la altura de tu header */
+    padding-top: 2rem; /* Espacio adicional en la parte superior */
+}
+
+
+/* Estilos mejorados para el carrusel de habilidades con mayor énfasis en la tarjeta activa */
+.swiper {
+    padding: 4rem 0; /* Más espacio vertical */
+}
+
+/* Tarjetas no activas */
+.swiper-slide {
+    opacity: 0.3; /* Más transparentes */
+    transform: scale(0.75); /* Considerablemente más pequeñas */
+    transition: all 0.6s ease;
+    filter: blur(2px); /* Mayor desenfoque */
+    pointer-events: none; /* Evita interacciones con las tarjetas inactivas */
+}
+
+/* Tarjeta activa */
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.25); /* Escala más grande */
+    z-index: 10;
+    filter: blur(0);
+    pointer-events: auto;
+    border: 2px solid rgba(75, 139, 190, 0.3); /* Borde sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), /* Sombra profunda */ 0 0 40px rgba(75, 139, 190, 0.4); /* Halo azul */
+}
+
+/* Mejora el fondo de la tarjeta activa */
+.swiper-slide-active > div {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(17, 24, 39, 0.95)); /* Fondo con gradiente */
+}
+
+/* Título en la tarjeta activa */
+.swiper-slide-active h3 {
+    font-size: 1.85rem; /* Título aún más grande */
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Efecto de subrayado para el título en la tarjeta activa */
+.swiper-slide-active h3:after {
+    content: '';
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    bottom: -8px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4B8BBE, transparent);
+}
+
+/* Icono en la tarjeta activa */
+.swiper-slide-active .icon-container {
+    transform: scale(1.2);
+    background: linear-gradient(135deg, rgba(75, 139, 190, 0.4), rgba(59, 130, 246, 0.2));
+    box-shadow: 0 0 30px rgba(75, 139, 190, 0.5);
+    border: 1px solid rgba(75, 139, 190, 0.3);
+}
+
+/* Los iconos brillan en la tarjeta activa */
+.swiper-slide-active .icon-container svg {
+    filter: drop-shadow(0 0 8px rgba(75, 139, 190, 0.8));
+}
+
+/* Animaciones para el carrusel de servicios */
+@keyframes servicios-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes servicios-slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.servicios-fadeIn {
+    animation: servicios-fadeIn 0.5s forwards;
+}
+
+.servicios-slideUp {
+    opacity: 0;
+    animation: servicios-slideUp 0.5s forwards;
+}
+
+/* Animaciones para el Hero con efecto de escritura */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.animate-slideUp {
+    opacity: 0;
+    animation: slideUp 0.8s forwards;
+}
+
+/* Estilo para el cursor parpadeante */
+.cursor-blink {
+    color: white;
+    font-weight: normal;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Opcional: Efecto de gradiente para el nombre */
+.text-gradient {
+    background-image: linear-gradient(90deg, #3498db, #2ecc71, #3498db);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientMove 8s linear infinite;
+}
+
+@keyframes gradientMove {
+    to {
+        background-position: 200% center;
+    }
+}

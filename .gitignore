@@ -1,0 +1,51 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Base de datos SQLite
+*.sqlite3
+db.sqlite3
+
+# Archivos de configuración local
+local_settings.py
+
+# Archivos de medios y estáticos
+/media/
+/static/
+staticfiles/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Next.js
+/portafolio-frontend/.next/
+/portafolio-frontend/out/
+/portafolio-frontend/node_modules/
+/portafolio-frontend/.vercel/
+/portafolio-frontend/build/
+/portafolio-frontend/.env*.local
+
+# npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
