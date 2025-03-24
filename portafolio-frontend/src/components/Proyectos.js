@@ -152,25 +152,6 @@ export default function Proyectos() {
                     Algunos de mis trabajos y proyectos recientes
                 </p>
 
-                {/* PANEL DE DEPURACIÓN - Elimina esto cuando todo funcione */}
-                <div className="bg-gray-800 border border-gray-700 p-4 rounded-lg mb-8 text-sm">
-                    <h3 className="font-bold text-yellow-400 mb-2">Panel de depuración</h3>
-                    <div className="grid grid-cols-1 gap-2">
-                        <p>Estado de carga: <span
-                            className={cargando ? "text-yellow-400" : "text-green-400"}>{cargando ? "⏳ Cargando..." : "✅ Completado"}</span>
-                        </p>
-                        <p>Error: <span
-                            className={error ? "text-red-400" : "text-green-400"}>{error ? error : "Ninguno"}</span></p>
-                        <p>Número de proyectos: <span
-                            className={proyectos.length > 0 ? "text-green-400" : "text-red-400"}>{proyectos.length}</span>
-                        </p>
-                        <p>Categoría activa: <span className="text-blue-400">{categoriaActiva}</span></p>
-                        <p>Categorías disponibles: <span className="text-blue-400">{categorias.join(", ")}</span></p>
-                        <p className="text-xs text-gray-400">Para ver más detalles, abre la consola del navegador
-                            (F12)</p>
-                    </div>
-                </div>
-
                 {/* Estado de carga */}
                 {cargando && (
                     <div className="flex justify-center items-center py-10">
