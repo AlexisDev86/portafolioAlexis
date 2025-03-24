@@ -2,6 +2,7 @@
 'use client'
 import {useEffect, useRef, useState} from 'react';
 import {FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
+import Image from "next/image";
 
 const SobreMi = () => {
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
@@ -76,9 +77,9 @@ const SobreMi = () => {
                             soluciones efecientes y adaptadas a sus necesidades.
                         </p>
                         <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-                            "Me definen la persistencia, la curiosidad, el trabajo colaborativo y una mentalidad de
+                            &quot;Me definen la persistencia, la curiosidad, el trabajo colaborativo y una mentalidad de
                             crecimiento continuo.
-                            Siempre estoy abierto a conectar, compartir ideas y sumar valor."
+                            Siempre estoy abierto a conectar, compartir ideas y sumar valor.
 
                         </p>
 
@@ -110,9 +111,11 @@ const SobreMi = () => {
                             ></div>
 
                             {/* Imagen principal con efecto */}
-                            <img
+                            <Image
                                 src="/img/pic.jpg"
                                 alt="Alexis Gallardo"
+                                width={400}
+                                height={500}
                                 className="relative rounded-xl z-10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
                                 style={{
                                     transform: `translateX(${mousePosition.x * -8}px) translateY(${mousePosition.y * -8}px)`,

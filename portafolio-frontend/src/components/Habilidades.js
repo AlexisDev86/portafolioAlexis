@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import {PiPencilRulerBold} from "react-icons/pi";
 import {BsRobot} from "react-icons/bs";
-import {FaGithub,} from "react-icons/fa";
+import {FaGithub, FaTools,} from "react-icons/fa";
 import {GrDeploy} from "react-icons/gr";
 import SoftSkillsCarousel from "@/components/carrusel";
 

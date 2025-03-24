@@ -30,10 +30,10 @@ export default function Hero() {
 
     return (
         <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-            {/* Imagen de fondo - Asegúrate de que la ruta sea correcta */}
+            {/* Imagen de fondo */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/img/desktop1.jpg" // Actualiza esta ruta según donde tengas tu imagen
+                    src="/img/desktop1.jpg"
                     alt="Escritorio de trabajo con pantallas de código"
                     fill
                     className="object-cover object-center"
