@@ -21,7 +21,9 @@ export const metadata = {
         'Ingeniero Informático',
         'Desarrollo Web',
         'Desarrollo de Aplicaciones',
+        'Páginas Web',
         'Python',
+        'Django',
         'React',
         'Next.js'
     ],

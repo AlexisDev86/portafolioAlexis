@@ -1,36 +1,27 @@
 'use client';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Image from 'next/image';
 import {FaGithub, FaLinkedin} from 'react-icons/fa';
 
 export default function Hero() {
-    const [displayText, setDisplayText] = useState('');
-    const [isTyping, setIsTyping] = useState(true);
+    const [animationReady, setAnimationReady] = useState(false);
     const fullName = "GALLARDO";
-    const typingSpeed = 150; // velocidad de escritura en ms
-    const blinkingCursor = isTyping ? '|' : '';
+    const containerRef = useRef(null);
 
+    // Configura la animación después de que el componente se monte
     useEffect(() => {
-        if (displayText.length < fullName.length) {
-            const timeoutId = setTimeout(() => {
-                setDisplayText(fullName.substring(0, displayText.length + 1));
-            }, typingSpeed);
+        // Renderiza el contenido completo inmediatamente para mejorar LCP
+        // Luego activa las animaciones cuando todo esté listo
+        const timer = setTimeout(() => {
+            setAnimationReady(true);
+        }, 100); // Pequeño retraso para asegurar que todo esté renderizado
 
-            return () => clearTimeout(timeoutId);
-        } else {
-            setIsTyping(false);
-            // Opcional: Empezar a parpadear el cursor después de completar la escritura
-            const blinkInterval = setInterval(() => {
-                setIsTyping(prev => !prev);
-            }, 500);
-
-            return () => clearInterval(blinkInterval);
-        }
-    }, [displayText, fullName]);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-            {/* Imagen de fondo */}
+            {/* Imagen de fondo con priority para mejorar LCP */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/img/desktop1.jpg"
@@ -51,9 +42,11 @@ export default function Hero() {
                         ALEXIS
                     </h2>
 
-                    <h1 className="text-white text-6xl md:text-8xl font-bold mb-4 typewriter-container">
-                        {displayText}
-                        <span className="cursor-blink">{blinkingCursor}</span>
+                    <h1 className="text-white text-6xl md:text-8xl font-bold mb-4" ref={containerRef}>
+                        <span className={`inline-block ${animationReady ? 'animate-typewriter' : ''}`}>
+                            {fullName}
+                        </span>
+                        <span className={`cursor-blink ${animationReady ? 'animate-blink' : 'opacity-0'}`}>|</span>
                     </h1>
 
                     <h3 className="text-yellow-400 text-2xl md:text-4xl font-medium mb-8 animate-slideUp"
