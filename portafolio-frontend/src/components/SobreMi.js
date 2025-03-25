@@ -55,7 +55,7 @@ const SobreMi = () => {
                 </h2>
 
                 <p className="text-xl text-gray-400 mb-12 text-center max-w-3xl mx-auto">
-                    Python mago e ingeniero tech.
+                    Desarrollador Web
                 </p>
 
                 <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
