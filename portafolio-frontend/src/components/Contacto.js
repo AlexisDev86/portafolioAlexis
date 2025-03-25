@@ -5,6 +5,7 @@ import {FaLocationDot} from "react-icons/fa6";
 import {CiClock2} from "react-icons/ci";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 import axios from "axios";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export default function Contacto() {
     // Estado para el formulario
@@ -84,8 +85,8 @@ export default function Contacto() {
 
         try {
             // Enviar datos al backend
-            const response = await axios.post('http://localhost:8000/api/contactos/', formData);
-
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/';
+            const response = await axios.post(`${apiUrl}/api/contactos/`, formData);
             console.log('Respuesta del servidor:', response.data);
 
 
