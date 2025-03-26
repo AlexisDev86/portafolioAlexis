@@ -32,6 +32,17 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="es" className={poppins.variable}>
+        <head>
+            {/* Preload de imagen LCP para mejorar rendimiento */}
+            <link
+                rel="preload"
+                href="/img/desktop1.jpg"
+                as="image"
+                type="image/jpeg"
+                fetchpriority="high"
+                media="(min-width: 320px)"
+            />
+        </head>
         <body className="min-h-screen bg-dark text-white scroll-smooth">
         <MainLayout>{children}</MainLayout>
         </body>
