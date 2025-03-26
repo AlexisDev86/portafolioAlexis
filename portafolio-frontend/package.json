@@ -8,11 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "tailwind-init": "tailwindcss init",
-    "postcss-init": "echo 'module.exports = { plugins: { tailwindcss: {}, autoprefixer: {} } }' > postcss.config.js"
+    "postcss-init": "echo 'module.exports = { plugins: { tailwindcss: {}, autoprefixer: {} } }' > postcss.config.js",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "axios": "^1.8.3",
     "next": "15.2.0",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",

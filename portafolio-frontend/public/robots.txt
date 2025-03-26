@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portafolio-alexis-one.vercel.app
+
+# Sitemaps
+Sitemap: https://portafolio-alexis-one.vercel.app/api/sitemap
