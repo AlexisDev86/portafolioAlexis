@@ -41,23 +41,20 @@ export default function Hero() {
                         ALEXIS
                     </h2>
 
-                    <h1 className="text-white text-6xl md:text-8xl font-bold mb-4 overflow-hidden">
-                        <span className={`inline-block ${animationReady ? 'animate-typewriter' : ''}`}>
-                            {fullName}
-                        </span>
+                    <h1 className="text-white text-6xl md:text-8xl font-bold mb-4 flex items-end">
+                      <span className={`inline-block ${animationReady ? 'animate-typewriter' : ''}`}>
+                        {fullName}
+                      </span>
                         <span
                             className={`inline-block bg-white ${animationReady ? 'animate-cursor' : 'opacity-0'}`}
                             style={{
-                                height: '6px',
-                                width: '24px',
-                                display: 'inline-block',
-                                marginLeft: '4px',
-                                position: 'relative',
-                                top: '-24px'
+                                height: '8px',
+                                width: '28px',
+                                marginLeft: '2px',
+                                marginBottom: '18px' // Ajusta para alinear con la línea base del texto
                             }}
                         ></span>
                     </h1>
-
                     <h3 className="text-yellow-400 text-2xl md:text-4xl font-medium mb-8 animate-slideUp"
                         style={{animationDelay: '1.2s'}}>
                         Ingeniero Informático

@@ -1,10 +1,9 @@
 'use client';
 import {useState} from 'react';
 import {MdEmail} from "react-icons/md";
-import {FaLocationDot} from "react-icons/fa6";
 import {CiClock2} from "react-icons/ci";
-import {FaGithub, FaLinkedin} from "react-icons/fa";
-import api from "../utils/api"; // Asumiendo que tienes configurado api.js
+import {FaGithub, FaLinkedin, FaLocationDot} from "react-icons/fa6";
+import api from "../utils/api";
 
 export default function Contacto() {
     // Estado para el formulario

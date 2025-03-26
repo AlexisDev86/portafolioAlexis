@@ -39,7 +39,7 @@ export default function RootLayout({children}) {
                 href="/img/desktop1.jpg"
                 as="image"
                 type="image/jpeg"
-                fetchpriority="high"
+                importance="high"
                 media="(min-width: 320px)"
             />
         </head>

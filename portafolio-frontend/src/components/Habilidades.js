@@ -1,9 +1,8 @@
 'use client';
 import {useState} from 'react';
-import {PiPencilRulerBold} from "react-icons/pi";
-import {BsRobot} from "react-icons/bs";
-import {FaGithub, FaTools,} from "react-icons/fa";
-import {GrDeploy} from "react-icons/gr";
+
+import {FaCloudDownloadAlt, FaGithub, FaRobot, FaRuler, FaTools} from "react-icons/fa";
+
 import SoftSkillsCarousel from "@/components/carrusel";
 
 export default function Habilidades() {
@@ -64,7 +63,7 @@ export default function Habilidades() {
     const toolCategories = {
         diseno: {
             name: "Diseño",
-            icon: <PiPencilRulerBold/>,
+            icon: <FaRuler/>,
             tools: [
                 {name: 'Canvas', color: '#3776AB'},
                 {name: 'Figma', color: '#092E20'},
@@ -80,7 +79,7 @@ export default function Habilidades() {
         },
         ia: {
             name: "IA Asistentes",
-            icon: <BsRobot/>,
+            icon: <FaRobot/>,
             tools: [
                 {name: 'Claude.ai', color: '#7A5FFF'},
                 {name: 'ChatGPT', color: '#10A37F'}
@@ -88,7 +87,7 @@ export default function Habilidades() {
         },
         despliegue: {
             name: "Despliegue",
-            icon: <GrDeploy/>,
+            icon: <FaCloudDownloadAlt/>,
             tools: [
                 {name: 'Vercel', color: '#2496ED'},
                 {name: 'PythonAnywhere', color: '#FF9900'},
@@ -275,13 +274,13 @@ export default function Habilidades() {
                                         <div className="relative z-10">
                                             {/* Icono según la categoría */}
                                             {activeToolCategory === 'diseno' ? (
-                                                <PiPencilRulerBold className="w-10 h-10 text-primary-blue"/>
+                                                <FaRuler className="w-10 h-10 text-primary-blue"/>
                                             ) : activeToolCategory === 'versiones' ? (
                                                 <FaGithub className="w-10 h-10 text-primary-blue"/>
                                             ) : activeToolCategory === 'ia' ? (
-                                                <BsRobot className="w-10 h-10 text-primary-blue"/>
+                                                <FaRobot className="w-10 h-10 text-primary-blue"/>
                                             ) : activeToolCategory === 'despliegue' ? (
-                                                <GrDeploy className="w-10 h-10 text-primary-blue"/>
+                                                <FaCloudDownloadAlt className="w-10 h-10 text-primary-blue"/>
                                             ) : (
                                                 <FaTools className="w-10 h-10 text-primary-blue"/>
                                             )}

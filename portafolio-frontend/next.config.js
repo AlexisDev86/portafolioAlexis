@@ -13,8 +13,8 @@ const nextConfig = {
     },
 
     // Configuraciones adicionales si son necesarias
-    webpack: (config, {isServer}) => {
-        // Configuración personalizada de webpack si se requiere
+    webpack: (config) => {
+        config.optimization.minimize = true;
         return config;
     }
 };
