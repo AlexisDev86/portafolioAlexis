@@ -1,27 +1,25 @@
 'use client';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import Image from 'next/image';
 import {FaGithub, FaLinkedin} from 'react-icons/fa';
 
 export default function Hero() {
     const [animationReady, setAnimationReady] = useState(false);
     const fullName = "GALLARDO";
-    const containerRef = useRef(null);
 
-    // Configura la animación después de que el componente se monte
+    // Aplicar animación después de que el componente se monte
     useEffect(() => {
-        // Renderiza el contenido completo inmediatamente para mejorar LCP
-        // Luego activa las animaciones cuando todo esté listo
+        // Pequeño retraso para asegurar que el componente está completamente montado
         const timer = setTimeout(() => {
             setAnimationReady(true);
-        }, 100); // Pequeño retraso para asegurar que todo esté renderizado
+        }, 100);
 
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-            {/* Imagen de fondo con priority para mejorar LCP */}
+            {/* Imagen de fondo con prioridad para mejorar LCP */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/img/desktop1.jpg"
@@ -29,6 +27,7 @@ export default function Hero() {
                     fill
                     className="object-cover object-center"
                     priority
+                    sizes="100vw"
                 />
             </div>
 
@@ -42,11 +41,21 @@ export default function Hero() {
                         ALEXIS
                     </h2>
 
-                    <h1 className="text-white text-6xl md:text-8xl font-bold mb-4" ref={containerRef}>
+                    <h1 className="text-white text-6xl md:text-8xl font-bold mb-4 overflow-hidden">
                         <span className={`inline-block ${animationReady ? 'animate-typewriter' : ''}`}>
                             {fullName}
                         </span>
-                        <span className={`cursor-blink ${animationReady ? 'animate-blink' : 'opacity-0'}`}>|</span>
+                        <span
+                            className={`inline-block bg-white ${animationReady ? 'animate-cursor' : 'opacity-0'}`}
+                            style={{
+                                height: '6px',
+                                width: '24px',
+                                display: 'inline-block',
+                                marginLeft: '4px',
+                                position: 'relative',
+                                top: '-24px'
+                            }}
+                        ></span>
                     </h1>
 
                     <h3 className="text-yellow-400 text-2xl md:text-4xl font-medium mb-8 animate-slideUp"

@@ -4,8 +4,7 @@ import {MdEmail} from "react-icons/md";
 import {FaLocationDot} from "react-icons/fa6";
 import {CiClock2} from "react-icons/ci";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
-import axios from "axios";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import api from "../utils/api"; // Asumiendo que tienes configurado api.js
 
 export default function Contacto() {
     // Estado para el formulario
@@ -84,13 +83,10 @@ export default function Contacto() {
         });
 
         try {
-            // Enviar datos al backend
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/';
-            const response = await axios.post(`${apiUrl}/api/contactos/`, formData);
-            console.log('Respuesta del servidor:', response.data);
+            // Usar la instancia API configurada
+            const response = await api.post('/api/contactos/', formData);
 
-
-            // Éxito si
+            // Éxito
             setSubmitStatus({
                 submitted: true,
                 success: true,
@@ -128,10 +124,10 @@ export default function Contacto() {
     };
 
     return (
-        <section id="contacto" className="min-h-screen bg-dark flex items-center">
-            <div className="container mx-auto px-12 md:px-20 lg:px-32 py-16">
+        <section id="contacto" className="min-h-screen bg-dark overflow-x-hidden">
+            <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
                 {/* Título con efecto */}
-                <h2 className="text-5xl font-bold mb-10 text-center relative">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-10 text-center relative">
                     <span className="relative inline-block">
                         <span
                             className="absolute -inset-1 blur-md bg-gradient-to-r from-transparent via-primary-blue/20 to-transparent rounded-lg"></span>
@@ -141,27 +137,28 @@ export default function Contacto() {
                 </h2>
 
                 {/* Descripción */}
-                <p className="text-xl text-gray-400 mb-16 text-center max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-gray-400 mb-8 md:mb-16 text-center max-w-3xl mx-auto">
                     ¿Tienes un proyecto en mente? ¡Conversemos!
                 </p>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
 
                     {/* Información de contacto */}
                     <div
-                        className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 md:p-10 rounded-xl shadow-xl shadow-python-yellow/20 hover:shadow-python-yellow/30 transition-all duration-500">
+                        className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 md:p-8 rounded-xl shadow-xl shadow-python-yellow/20 hover:shadow-python-yellow/30 transition-all duration-500">
                         <h3 className="text-2xl font-semibold mb-6 text-white">Información de Contacto</h3>
 
-                        <div className="space-y-6 mb-10">
+                        <div className="space-y-6 mb-6 md:mb-10">
                             <div className="flex items-start">
                                 <div
                                     className="w-10 h-10 rounded-full bg-python-yellow/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                                     <MdEmail className="w-5 h-5 text-python-yellow"/>
                                 </div>
-                                <div>
+                                <div className="min-w-0 flex-1"> {/* Añade estas clases para evitar desborde */}
                                     <h4 className="text-white font-medium mb-1">Email</h4>
-                                    <p className="text-gray-400">desarrollowebservicios@gmail.com</p>
-                                    <p className="text-gray-500 text-sm mt-1">Respondo en menos de 24 horas</p>
+                                    <p className="text-gray-400 break-all text-sm md:text-base">desarrollowebservicios@gmail.com</p>
+                                    <p className="text-gray-500 text-xs md:text-sm mt-1">Respondo en menos de 24
+                                        horas</p>
                                 </div>
                             </div>
 
@@ -170,10 +167,11 @@ export default function Contacto() {
                                     className="w-10 h-10 rounded-full bg-python-yellow/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                                     <FaLocationDot className="w-5 h-5 text-python-yellow"/>
                                 </div>
-                                <div>
+                                <div className="min-w-0 flex-1">
                                     <h4 className="text-white font-medium mb-1">Ubicación</h4>
-                                    <p className="text-gray-400">Puerto Montt, Chile</p>
-                                    <p className="text-gray-500 text-sm mt-1">Disponible para proyectos remotos</p>
+                                    <p className="text-gray-400 text-sm md:text-base">Puerto Montt, Chile</p>
+                                    <p className="text-gray-500 text-xs md:text-sm mt-1">Disponible para proyectos
+                                        remotos</p>
                                 </div>
                             </div>
 
@@ -182,10 +180,10 @@ export default function Contacto() {
                                     className="w-10 h-10 rounded-full bg-python-yellow/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                                     <CiClock2 className="w-5 h-5 text-python-yellow"/>
                                 </div>
-                                <div>
+                                <div className="min-w-0 flex-1">
                                     <h4 className="text-white font-medium mb-1">Horario</h4>
-                                    <p className="text-gray-400">Lunes a Viernes: 9:00 - 18:00</p>
-                                    <p className="text-gray-500 text-sm mt-1">Hora de Chile (GMT-3)</p>
+                                    <p className="text-gray-400 text-sm md:text-base">Lunes a Viernes: 9:00 - 18:00</p>
+                                    <p className="text-gray-500 text-xs md:text-sm mt-1">Hora de Chile (GMT-3)</p>
                                 </div>
                             </div>
                         </div>
@@ -197,18 +195,18 @@ export default function Contacto() {
                                 <a href="https://www.linkedin.com/in/alexis-gallardo-6a895520b/" target="_blank"
                                    rel="noopener noreferrer"
                                    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-python-yellow/80 flex items-center justify-center transition-colors duration-300">
-                                    <FaLinkedin className="w-6 h-6 text-white"/>
+                                    <FaLinkedin className="w-5 h-5 text-white"/>
                                 </a>
                                 <a href="https://github.com/AlexisDev86" target="_blank" rel="noopener noreferrer"
                                    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-python-yellow/80 flex items-center justify-center transition-colors duration-300">
-                                    <FaGithub className="w-6 h-6 text-white"/>
+                                    <FaGithub className="w-5 h-5 text-white"/>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     {/* Formulario de contacto */}
-                    <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 md:p-10 rounded-xl
+                    <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 md:p-8 rounded-xl
                     shadow-xl shadow-python-yellow/20 hover:shadow-python-yellow/30 transition-all duration-500">
                         <h3 className="text-2xl font-semibold mb-6 text-white">Envía un mensaje</h3>
 
@@ -303,38 +301,40 @@ export default function Contacto() {
                     </div>
                 </div>
 
-                {/* FAQ */}
-                <div className="mt-16">
-                    <h3 className="text-2xl font-semibold mb-8 text-center text-white">Preguntas Frecuentes</h3>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                {/* FAQ */}
+                <div className="mt-12 md:mt-16">
+                    <h3 className="text-2xl font-semibold mb-6 md:mb-8 text-center text-white">Preguntas Frecuentes</h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
                         <div
-                            className="bg-gray-800/40 p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
+                            className="bg-gray-800/40 p-4 md:p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
                             <h4 className="text-lg font-medium mb-2 text-white">¿Cuál es tu tiempo de respuesta?</h4>
-                            <p className="text-gray-400">Respondo a todas las consultas en menos de 24 horas en días
-                                laborables.</p>
+                            <p className="text-gray-400 text-sm md:text-base">Respondo a todas las consultas en menos de
+                                24 horas en días laborables.</p>
                         </div>
 
                         <div
-                            className="bg-gray-800/40 p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
+                            className="bg-gray-800/40 p-4 md:p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
                             <h4 className="text-lg font-medium mb-2 text-white">¿Trabajas con clientes
                                 internacionales?</h4>
-                            <p className="text-gray-400">Sí, trabajo con clientes de todo el mundo de forma remota.</p>
+                            <p className="text-gray-400 text-sm md:text-base">Sí, trabajo con clientes de todo el mundo
+                                de forma remota.</p>
                         </div>
 
                         <div
-                            className="bg-gray-800/40 p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
+                            className="bg-gray-800/40 p-4 md:p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
                             <h4 className="text-lg font-medium mb-2 text-white">¿Cómo es tu proceso de trabajo?</h4>
-                            <p className="text-gray-400">Mi proceso incluye una fase de descubrimiento, planificación,
-                                desarrollo y lanzamiento, con comunicación constante.</p>
+                            <p className="text-gray-400 text-sm md:text-base">Mi proceso incluye una fase de
+                                descubrimiento, planificación, desarrollo y lanzamiento, con comunicación constante.</p>
                         </div>
 
                         <div
-                            className="bg-gray-800/40 p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
+                            className="bg-gray-800/40 p-4 md:p-6 rounded-lg shadow-md shadow-python-yellow/15 hover:shadow-lg hover:shadow-python-yellow/25 transition-all duration-300">
                             <h4 className="text-lg font-medium mb-2 text-white">¿Ofreces mantenimiento
                                 post-lanzamiento?</h4>
-                            <p className="text-gray-400">Sí, ofrezco diferentes planes de mantenimiento y soporte
-                                técnico continuo para todos mis proyectos.</p>
+                            <p className="text-gray-400 text-sm md:text-base">Sí, ofrezco diferentes planes de
+                                mantenimiento y soporte técnico continuo para todos mis proyectos.</p>
                         </div>
                     </div>
                 </div>

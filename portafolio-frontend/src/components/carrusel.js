@@ -33,7 +33,7 @@ const SoftSkillsCarousel = ({setActiveSoftSkill}) => {
         {
             category: 'adaptabilidad',
             name: 'Aprendizaje continuo',
-            description: 'Me gusta prender cosas nuevas y adaptarme a los cambios.',
+            description: 'Me gusta aprender cosas nuevas y adaptarme a los cambios.',
             icon: FaSyncAlt,
             categoryName: 'Adaptabilidad'
         },
