@@ -148,7 +148,7 @@ export default function Proyectos() {
     };
 
     return (
-        <section id="proyectos" className="min-h-screen bg-dark flex items-center">
+        <section id="proyectos" className="min-h-screen bg-dark-bg flex items-center">
             <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
                 {/* Título con efecto */}
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-10 text-center relative">

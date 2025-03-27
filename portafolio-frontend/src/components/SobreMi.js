@@ -60,7 +60,7 @@ const SobreMi = () => {
     return (
         <section
             id="sobre-mi"
-            className="min-h-screen bg-dark py-16"
+            className="min-h-screen bg-dark-bg py-16"
             onMouseMove={handleMouseMove}
             ref={sectionRef}
         >

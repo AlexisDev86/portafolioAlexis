@@ -71,7 +71,7 @@ export default function Servicios() {
     ];
 
     return (
-        <section id="servicios" className="min-h-screen bg-dark flex items-center py-20">
+        <section id="servicios" className="min-h-screen bg-dark-bg flex items-center py-20">
             <div className="container mx-auto px-4 md:px-12 lg:px-20">
                 {/* Título con efecto */}
                 <h2 className="text-5xl font-bold mb-10 text-center relative">

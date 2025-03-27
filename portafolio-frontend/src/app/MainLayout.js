@@ -72,7 +72,9 @@ export default function MainLayout({children}) {
                                 className="logo-graphic w-8 h-8 bg-gradient-to-br from-python-yellow to-python-yellow/70 rounded-lg flex items-center justify-center transform -rotate-3 shadow-md shadow-python-yellow/20 mr-1.5">
                                 <span className="text-dark font-bold text-lg">A</span>
                             </div>
-                            <span className="text-python-yellow font-semibold text-xl tracking-wide">.Gallardo</span>
+                            <span className="font-semibold text-xl tracking-wide"
+                                  style=" color=: #FFE873; text-shadow: 0px 0px 0px rgba(0,0,0,0.5);">
+                                .Gallardo</span>
                         </Link>
 
                         {/* Menú para escritorio */}
@@ -209,7 +211,7 @@ export default function MainLayout({children}) {
             </main>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-8">
+            <footer className="bg-dark-bg-900 text-white py-8">
                 <div className="container mx-auto px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Columna 1: Logo y descripción */}

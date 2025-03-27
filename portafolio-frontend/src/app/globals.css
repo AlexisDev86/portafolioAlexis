@@ -2,37 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    /* Variables originales */
-    --background: #ffffff;
-    --foreground: #171717;
-
-    /*Variables personalizadas */
-    --primary-blue: #4B8BBE;
-    --dark-background: #303030;
-    --light-gray: #888888;
-    --white: #FFFFFF;
-    --python-yellow: #FFD43B;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-}
-
+/* Aplicación directa de los estilos al body */
 body {
-    color: var(--foreground);
-    background: var(--background);
+    color: #ffffff;
+    background: #000000 !important; /* !important para mayor prioridad */
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-section {
-    scroll-margin-top: 4rem; /* Ajusta este valor según la altura de tu header */
-    padding-top: 2rem; /* Espacio adicional en la parte superior */
+/* Estilos específicos convertidos para usar valores directos */
+.text-python-yellow {
+    color: #FFD43B;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
 }
 
+.text-gray-400 {
+    color: #D1D5DB !important;
+}
+
+section {
+    scroll-margin-top: 4rem;
+    padding-top: 2rem;
+}
 
 /* Estilos mejorados para el carrusel de habilidades con mayor énfasis en la tarjeta activa */
 .swiper {
@@ -197,15 +188,6 @@ section {
     }
     to {
         width: 100%;
-    }
-}
-
-@keyframes blink {
-    from, to {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
     }
 }
 

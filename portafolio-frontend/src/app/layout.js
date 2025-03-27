@@ -1,5 +1,6 @@
 // app/layout.js (NO se incluye 'use client' aquí)
 import {Poppins} from 'next/font/google';
+import {Analytics} from '@vercel/analytics/react';
 import MainLayout from './MainLayout';
 import './globals.css';
 
@@ -43,8 +44,9 @@ export default function RootLayout({children}) {
                 media="(min-width: 320px)"
             />
         </head>
-        <body className="min-h-screen bg-dark text-white scroll-smooth">
+        <body className="min-h-screen bg-dark-bg text-white scroll-smooth">
         <MainLayout>{children}</MainLayout>
+        <Analytics/>
         </body>
         </html>
     );

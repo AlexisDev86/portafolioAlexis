@@ -136,7 +136,7 @@ export default function Habilidades() {
     };
 
     return (
-        <section id="habilidades" className="min-h-screen bg-dark flex items-center">
+        <section id="habilidades" className="min-h-screen bg-dark-bg flex items-center">
             <div className="container mx-auto px-12 md:px-20 lg:px-32 py-16">
                 {/* Título con efecto */}
                 <h2 className="text-5xl font-bold mb-10 text-center relative">

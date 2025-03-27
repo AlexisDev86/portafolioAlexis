@@ -8,10 +8,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'primary-blue': '#3776AB',
-                'dark-bg': '#303030',
+                'primary-blue': '#306998',
+                'dark-bg': '#000000',
                 'light-gray': '#888888',
                 'python-yellow': '#FFD43B',
+                'foreground': '#ffffff',     // Nuevo - Para usar como text-foreground
             },
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],

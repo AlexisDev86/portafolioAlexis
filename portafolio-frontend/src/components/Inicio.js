@@ -50,7 +50,7 @@ export default function Hero() {
                             style={{
                                 height: '8px',
                                 width: '28px',
-                                marginLeft: '2px',
+                                marginLeft: '-4px',
                                 marginBottom: '18px' // Ajusta para alinear con la línea base del texto
                             }}
                         ></span>
