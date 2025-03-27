@@ -73,8 +73,9 @@ export default function MainLayout({children}) {
                                 <span className="text-dark font-bold text-lg">A</span>
                             </div>
                             <span className="font-semibold text-xl tracking-wide"
-                                  style=" color=: #FFE873; text-shadow: 0px 0px 0px rgba(0,0,0,0.5);">
-                                .Gallardo</span>
+                                  style={{color: "#FFE873", textShadow: "0px 0px 0px rgba(0,0,0,0.5)"}}>
+                                  .Gallardo
+                            </span>
                         </Link>
 
                         {/* Menú para escritorio */}
