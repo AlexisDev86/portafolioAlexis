@@ -172,66 +172,71 @@ export default function Servicios() {
                 <div className="mt-20">
                     <h3 className="text-2xl font-semibold mb-8 text-center text-white">Cómo Trabajo Contigo</h3>
                     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+
+                        {/* Primer div */}
                         <div className="flex-1 max-w-xs group">
                             <div className="relative">
                                 <div
-                                    className="w-14 h-14 rounded-full bg-primary-blue/20 flex items-center justify-center mb-4 text-xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/40 transition-all duration-300">
+                                    className="w-16 h-16 rounded-full bg-primary-blue/30 flex items-center justify-center mb-4 text-2xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/60 group-hover:bg-primary-blue/70 transition-all duration-300 transform group-hover:scale-110">
                                     <span className="text-white font-bold">1</span>
                                 </div>
                                 <div
-                                    className="absolute top-7 left-7 w-full h-0.5 bg-gradient-to-r from-primary-blue/40 to-primary-blue/10 z-0 hidden md:block"></div>
+                                    className="absolute top-8 left-8 w-full h-0.5 bg-gradient-to-r from-primary-blue/60 to-primary-blue/10 z-0 hidden md:block"></div>
                             </div>
                             <h4 className="text-lg font-medium mb-2 text-white group-hover:text-primary-blue transition-colors duration-300">Descubrimiento</h4>
-                            <p className="text-gray-400 text-sm bg-gray-800/30 p-4 rounded-lg shadow-md shadow-primary-blue/10 group-hover:shadow-lg group-hover:shadow-primary-blue/20 transition-all duration-300">
+                            <p className="text-gray-300 text-sm bg-gray-900 p-5 rounded-lg border border-gray-800 group-hover:border-primary-blue/40 shadow-md shadow-primary-blue/10 group-hover:shadow-xl group-hover:shadow-primary-blue/30 transition-all duration-300 transform group-hover:-translate-y-1 group-hover:bg-gray-800">
                                 Conocemos tu negocio, objetivos y público objetivo para crear una estrategia digital
                                 efectiva.
                             </p>
                         </div>
 
+                        {/* Segundo div */}
                         <div className="flex-1 max-w-xs group">
                             <div className="relative">
                                 <div
-                                    className="w-14 h-14 rounded-full bg-primary-blue/20 flex items-center justify-center mb-4 text-xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/40 transition-all duration-300">
+                                    className="w-16 h-16 rounded-full bg-primary-blue/30 flex items-center justify-center mb-4 text-2xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/60 group-hover:bg-primary-blue/70 transition-all duration-300 transform group-hover:scale-110">
                                     <span className="text-white font-bold">2</span>
                                 </div>
                                 <div
-                                    className="absolute top-7 left-7 w-full h-0.5 bg-gradient-to-r from-primary-blue/40 to-primary-blue/10 z-0 hidden md:block"></div>
+                                    className="absolute top-8 left-8 w-full h-0.5 bg-gradient-to-r from-primary-blue/60 to-primary-blue/10 z-0 hidden md:block"></div>
                             </div>
                             <h4 className="text-lg font-medium mb-2 text-white group-hover:text-primary-blue transition-colors duration-300">
                                 Diseño y Propuesta
                             </h4>
-                            <p className="text-gray-400 text-sm bg-gray-800/30 p-4 rounded-lg shadow-md shadow-primary-blue/10 group-hover:shadow-lg group-hover:shadow-primary-blue/20 transition-all duration-300">
+                            <p className="text-gray-300 text-sm bg-gray-900 p-5 rounded-lg border border-gray-800 group-hover:border-primary-blue/40 shadow-md shadow-primary-blue/10 group-hover:shadow-xl group-hover:shadow-primary-blue/30 transition-all duration-300 transform group-hover:-translate-y-1 group-hover:bg-gray-800">
                                 Creo un concepto visual y funcional alineado con tu marca y presupuesto.
                             </p>
                         </div>
 
+                        {/* Tercer div */}
                         <div className="flex-1 max-w-xs group">
                             <div className="relative">
                                 <div
-                                    className="w-14 h-14 rounded-full bg-primary-blue/20 flex items-center justify-center mb-4 text-xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/40 transition-all duration-300">
+                                    className="w-16 h-16 rounded-full bg-primary-blue/30 flex items-center justify-center mb-4 text-2xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/60 group-hover:bg-primary-blue/70 transition-all duration-300 transform group-hover:scale-110">
                                     <span className="text-white font-bold">3</span>
                                 </div>
                                 <div
-                                    className="absolute top-7 left-7 w-full h-0.5 bg-gradient-to-r from-primary-blue/40 to-primary-blue/10 z-0 hidden md:block"></div>
+                                    className="absolute top-8 left-8 w-full h-0.5 bg-gradient-to-r from-primary-blue/60 to-primary-blue/10 z-0 hidden md:block"></div>
                             </div>
                             <h4 className="text-lg font-medium mb-2 text-white group-hover:text-primary-blue transition-colors duration-300">
                                 Desarrollo y Revisiones
                             </h4>
-                            <p className="text-gray-400 text-sm bg-gray-800/30 p-4 rounded-lg shadow-md shadow-primary-blue/10 group-hover:shadow-lg group-hover:shadow-primary-blue/20 transition-all duration-300">
+                            <p className="text-gray-300 text-sm bg-gray-900 p-5 rounded-lg border border-gray-800 group-hover:border-primary-blue/40 shadow-md shadow-primary-blue/10 group-hover:shadow-xl group-hover:shadow-primary-blue/30 transition-all duration-300 transform group-hover:-translate-y-1 group-hover:bg-gray-800">
                                 Construyo tu solución digital con comunicación constante y ajustes según tus
                                 comentarios.
                             </p>
                         </div>
 
+                        {/* Cuarto div */}
                         <div className="flex-1 max-w-xs group">
                             <div
-                                className="w-14 h-14 rounded-full bg-primary-blue/20 flex items-center justify-center mb-4 text-xl shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/40 transition-all duration-300">
+                                className="w-16 h-16 rounded-full bg-primary-blue/30 flex items-center justify-center mb-4 text-2xl z-10 relative shadow-md shadow-primary-blue/30 group-hover:shadow-lg group-hover:shadow-primary-blue/60 group-hover:bg-primary-blue/70 transition-all duration-300 transform group-hover:scale-110">
                                 <span className="text-white font-bold">4</span>
                             </div>
                             <h4 className="text-lg font-medium mb-2 text-white group-hover:text-primary-blue transition-colors duration-300">
                                 Lanzamiento y Crecimiento
                             </h4>
-                            <p className="text-gray-400 text-sm bg-gray-800/30 p-4 rounded-lg shadow-md shadow-primary-blue/10 group-hover:shadow-lg group-hover:shadow-primary-blue/20 transition-all duration-300">
+                            <p className="text-gray-300 text-sm bg-gray-900 p-5 rounded-lg border border-gray-800 group-hover:border-primary-blue/40 shadow-md shadow-primary-blue/10 group-hover:shadow-xl group-hover:shadow-primary-blue/30 transition-all duration-300 transform group-hover:-translate-y-1 group-hover:bg-gray-800">
                                 Publico tu proyecto y te apoyo con mantenimiento, marketing y estrategias de
                                 crecimiento.
                             </p>

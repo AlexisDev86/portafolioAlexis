@@ -193,10 +193,13 @@ export default function Contacto() {
                             <div className="flex space-x-4">
                                 <a href="https://www.linkedin.com/in/alexis-gallardo-6a895520b/" target="_blank"
                                    rel="noopener noreferrer"
+                                   aria-label="Visita mi perfil en LinkedIn"
                                    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-python-yellow/80 flex items-center justify-center transition-colors duration-300">
                                     <FaLinkedin className="w-5 h-5 text-white"/>
                                 </a>
-                                <a href="https://github.com/AlexisDev86" target="_blank" rel="noopener noreferrer"
+                                <a href="https://github.com/AlexisDev86" target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Visitar mi perfil en Github"
                                    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-python-yellow/80 flex items-center justify-center transition-colors duration-300">
                                     <FaGithub className="w-5 h-5 text-white"/>
                                 </a>

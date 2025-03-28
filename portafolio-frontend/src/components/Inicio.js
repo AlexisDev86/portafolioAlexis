@@ -39,23 +39,24 @@ export default function Hero() {
                 <div className="max-w-3xl">
                     <div className="flex flex-col">
                         <h1 className="flex flex-col">
-                            <span className="text-primary-blue text-4xl md:text-6xl font-light mb-2 animate-fadeIn">
-                              ALEXIS
-                            </span>
+                                <span className="text-primary-blue text-4xl md:text-6xl font-light mb-2 animate-fadeIn">
+                                  ALEXIS
+                                </span>
 
-                            <span className="text-white text-6xl md:text-8xl font-bold mb-4 flex items-end">
-                              <span className={`inline-block ${animationReady ? 'animate-typewriter' : ''}`}>
-                                {fullName}
-                              </span>
-                              <span
-                                  className={`inline-block bg-white ${animationReady ? 'animate-cursor' : 'opacity-0'}`}
-                                  style={{
-                                      height: '8px',
-                                      width: '4px',
-                                      marginLeft: '2px',
-                                      marginBottom: '16px'
-                                  }}
-                              ></span>
+                            <span className="text-white text-6xl md:text-8xl font-bold mb-4 flex items-end relative">
+                                  <span className={`inline-block ${animationReady ? 'animate-typewriter' : ''}`}>
+                                    {fullName}
+                                  </span>
+                                  <span
+                                      className={`inline-block bg-white ${animationReady ? 'animate-cursor' : 'opacity-0'}`}
+                                      style={{
+                                          position: 'absolute',
+                                          right: '-4px',  // Posiciona justo después del texto
+                                          bottom: '16px', // Ajusta verticalmente
+                                          height: '40px', // Altura más proporcional al texto
+                                          width: '4px'    // Delgado como un cursor real
+                                      }}
+                                  ></span>
                             </span>
                         </h1>
 
