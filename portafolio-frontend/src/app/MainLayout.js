@@ -72,8 +72,7 @@ export default function MainLayout({children}) {
                                 className="logo-graphic w-8 h-8 bg-gradient-to-br from-python-yellow to-python-yellow/70 rounded-lg flex items-center justify-center transform -rotate-3 shadow-md shadow-python-yellow/20 mr-1.5">
                                 <span className="text-dark font-bold text-lg">A</span>
                             </div>
-                            <span className="font-semibold text-xl tracking-wide"
-                                  style={{color: "#FFE873", textShadow: "0px 0px 0px rgba(0,0,0,0.5)"}}>
+                            <span className="font-semibold text-xl tracking-wide text-python-yellow">
                                   .Gallardo
                             </span>
                         </Link>
@@ -262,8 +261,8 @@ export default function MainLayout({children}) {
                                     href="https://github.com/AlexisDev86"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Visitar mi perfil en GitHub"
                                     className="text-gray-400 hover:text-python-yellow"
-                                    aria-label="GitHub"
                                 >
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                         <path fillRule="evenodd"
@@ -275,8 +274,8 @@ export default function MainLayout({children}) {
                                     href="https://www.linkedin.com/in/alexis-gallardo-6a895520b/"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Visitar mi perfil en Linkedin"
                                     className="text-gray-400 hover:text-python-yellow"
-                                    aria-label="LinkedIn"
                                 >
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -288,7 +287,7 @@ export default function MainLayout({children}) {
                     </div>
 
                     {/* Copyright */}
-                    <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
+                    <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-300">
                         <p>&copy; {new Date().getFullYear()} Alexis Gallardo. Todos los derechos reservados.</p>
                     </div>
                 </div>

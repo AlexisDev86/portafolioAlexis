@@ -178,7 +178,7 @@ export default function Habilidades() {
                 {skillType === 'technical' && (
                     <>
                         {/* Descripción */}
-                        <p className="text-xl text-gray-400 mb-10 text-center max-w-3xl mx-auto">
+                        <p className="text-xl text-gray-200 mb-10 text-center max-w-3xl mx-auto">
                             Áreas en las que puedo aportar soluciones de valor
                         </p>
 
@@ -330,21 +330,21 @@ export default function Habilidades() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <div
-                                    className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-primary-blue/50 shadow-md shadow-primary-blue/10 hover:shadow-lg hover:shadow-primary-blue/25 transition-all duration-300 transform hover:-translate-y-1">
-                                    <h4 className="text-primary-blue font-medium mb-2">Desarrollo Ágil</h4>
-                                    <p className="text-gray-400 text-sm">Aplicación de metodologías ágiles para entregar
+                                    className="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-primary-blue/80 shadow-md shadow-primary-blue/10 hover:shadow-lg hover:shadow-primary-blue/25 transition-all duration-300 transform hover:-translate-y-1">
+                                    <h4 className="text-white font-medium mb-2">Desarrollo Ágil</h4>
+                                    <p className="text-gray-200 text-sm">Aplicación de metodologías ágiles para entregar
                                         valor de forma iterativa y eficiente.</p>
                                 </div>
                                 <div
-                                    className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-primary-blue/50 shadow-md shadow-primary-blue/10 hover:shadow-lg hover:shadow-primary-blue/25 transition-all duration-300 transform hover:-translate-y-1">
-                                    <h4 className="text-primary-blue font-medium mb-2">Clean Code</h4>
-                                    <p className="text-gray-400 text-sm">Desarrollo de código mantenible, eficiente y
+                                    className="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-primary-blue/80 shadow-md shadow-primary-blue/10 hover:shadow-lg hover:shadow-primary-blue/25 transition-all duration-300 transform hover:-translate-y-1">
+                                    <h4 className="text-white font-medium mb-2">Clean Code</h4>
+                                    <p className="text-gray-200 text-sm">Desarrollo de código mantenible, eficiente y
                                         bien documentado.</p>
                                 </div>
                                 <div
-                                    className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-primary-blue/50 shadow-md shadow-primary-blue/10 hover:shadow-lg hover:shadow-primary-blue/25 transition-all duration-300 transform hover:-translate-y-1">
-                                    <h4 className="text-primary-blue font-medium mb-2">Aprendizaje Continuo</h4>
-                                    <p className="text-gray-400 text-sm">Actualización constante sobre las mejores
+                                    className="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-primary-blue/80 shadow-md shadow-primary-blue/10 hover:shadow-lg hover:shadow-primary-blue/25 transition-all duration-300 transform hover:-translate-y-1">
+                                    <h4 className="text-white font-medium mb-2">Aprendizaje Continuo</h4>
+                                    <p className="text-gray-200 text-sm">Actualización constante sobre las mejores
                                         prácticas y tecnologías emergentes.</p>
                                 </div>
                             </div>

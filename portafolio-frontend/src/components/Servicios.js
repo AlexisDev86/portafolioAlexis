@@ -84,7 +84,7 @@ export default function Servicios() {
                 </h2>
 
                 {/* Descripción */}
-                <p className="text-xl text-gray-400 mb-16 text-center max-w-3xl mx-auto">
+                <p className="text-xl text-gray-200 mb-16 text-center max-w-3xl mx-auto">
                     Soluciones digitales para profesionales independientes, emprendedores y organizaciones
                 </p>
 
@@ -119,7 +119,7 @@ export default function Servicios() {
                         {servicios.map((servicio, index) => (
                             <SwiperSlide key={servicio.id}>
                                 <div
-                                    className="relative flex flex-col items-center px-6 py-14 bg-gray-800/70 rounded-xl backdrop-blur-sm transition-all duration-300 h-full">
+                                    className="relative flex flex-col items-center px-6 py-14 bg-gray-900 rounded-xl backdrop-blur-sm transition-all duration-300 h-full">
                                     {/* Icono */}
                                     <div
                                         className="mb-8 p-6 bg-gradient-to-br from-primary-blue/20 to-primary-blue/10 rounded-full shadow-lg shadow-primary-blue/20 transform transition-all duration-500 hover:scale-110 icon-container">
@@ -128,7 +128,7 @@ export default function Servicios() {
 
                                     {/* Contenido */}
                                     <h3 className="text-2xl font-semibold mb-4 text-white text-center">{servicio.titulo}</h3>
-                                    <p className="text-gray-300 text-center max-w-xs mx-auto leading-relaxed mb-6">{servicio.descripcion}</p>
+                                    <p className="text-gray-200 text-center max-w-xs mx-auto leading-relaxed mb-6">{servicio.descripcion}</p>
 
                                     {/* Lista de detalles - Visible solo en la tarjeta activa */}
                                     <div className="mt-auto overflow-hidden transition-all duration-300">
