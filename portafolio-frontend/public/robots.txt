@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://portafolio-alexis-one.vercel.app
+Host: https://www.alexisgallardo.dev/
 
 # Sitemaps
-Sitemap: https://portafolio-alexis-one.vercel.app/api/sitemap
+Sitemap: https://www.alexisgallardo.dev//api/sitemap
