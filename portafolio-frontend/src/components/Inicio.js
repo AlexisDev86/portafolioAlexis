@@ -22,7 +22,7 @@ export default function Hero() {
             {/* Imagen de fondo con prioridad para mejorar LCP */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/img/desktop.webp"
+                    src="/img/desktop1.webp"
                     alt="Escritorio de trabajo con pantallas de código"
                     fill
                     className="object-cover object-center"
