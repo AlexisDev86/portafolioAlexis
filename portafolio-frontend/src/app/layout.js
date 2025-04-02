@@ -81,7 +81,7 @@ export default function RootLayout({children}) {
             {/* Preload de imagen LCP para mejorar rendimiento */}
             <link
                 rel="preload"
-                href="https://res.cloudinary.com/dsmybis3w/image/upload/f_auto,q_auto/v1743591288/desktop1_xe6bkn.web"
+                href="https://res.cloudinary.com/dsmybis3w/image/upload/f_auto,q_auto/v1743591288/desktop1_xe6bkn.webp"
                 as="image"
                 type="image/webp"
                 importance="high"
