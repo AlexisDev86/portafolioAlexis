@@ -185,7 +185,7 @@ export default function Servicios() {
                             </div>
                             <h4 className="text-lg font-medium mb-2 text-white group-hover:text-primary-blue transition-colors duration-300">Descubrimiento</h4>
                             <p className="text-gray-300 text-sm bg-gray-900 p-5 rounded-lg border border-gray-800 group-hover:border-primary-blue/40 shadow-md shadow-primary-blue/10 group-hover:shadow-xl group-hover:shadow-primary-blue/30 transition-all duration-300 transform group-hover:-translate-y-1 group-hover:bg-gray-800">
-                                Conocemos tu negocio, objetivos y público objetivo para crear una estrategia digital
+                                Conozco tu negocio, objetivos y público objetivo para desarrollar una estrategiadigital
                                 efectiva.
                             </p>
                         </div>
@@ -222,7 +222,7 @@ export default function Servicios() {
                                 Desarrollo y Revisiones
                             </h4>
                             <p className="text-gray-300 text-sm bg-gray-900 p-5 rounded-lg border border-gray-800 group-hover:border-primary-blue/40 shadow-md shadow-primary-blue/10 group-hover:shadow-xl group-hover:shadow-primary-blue/30 transition-all duration-300 transform group-hover:-translate-y-1 group-hover:bg-gray-800">
-                                Construyo tu solución digital con comunicación constante y ajustes según tus
+                                Construyo la solución digital con comunicación constante y ajustes según tus
                                 comentarios.
                             </p>
                         </div>
