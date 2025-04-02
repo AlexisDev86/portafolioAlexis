@@ -22,12 +22,13 @@ export default function Hero() {
             {/* Imagen de fondo con prioridad para mejorar LCP */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/img/desktop1.webp"
+                    src="https://res.cloudinary.com/dsmybis3w/image/upload/f_auto,q_auto/v1743591288/desktop1_xe6bkn.webp"
                     alt="Escritorio de trabajo con pantallas de código"
                     fill
                     className="object-cover object-center"
                     priority={true}
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                    quality={80}
                 />
             </div>
 
