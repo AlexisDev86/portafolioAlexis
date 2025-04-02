@@ -79,6 +79,7 @@ export default function RootLayout({children}) {
         <html lang="es" className={poppins.variable}>
         <head>
             {/* Preload de imagen LCP para mejorar rendimiento */}
+            {/*}
             <link
                 href="https://res.cloudinary.com/dsmybis3w/image/upload/f_auto,q_auto/v1743591288/desktop1_xe6bkn.webp"
                 as="image"
@@ -86,6 +87,7 @@ export default function RootLayout({children}) {
                 importance="high"
                 media="(min-width: 320px)"
             />
+            */}
 
             {/* Favicon y Apple Touch Icon */}
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
