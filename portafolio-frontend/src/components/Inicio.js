@@ -26,8 +26,9 @@ export default function Hero() {
                     alt="Escritorio de trabajo con pantallas de código"
                     fill
                     className="object-cover object-center"
-                    priority={true}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                    priority={true}
+                    fetchpriority="high"
                     quality={80}
                 />
             </div>
